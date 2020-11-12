@@ -28,7 +28,7 @@ const Import: React.FC = () => {
     // TODO
 
     try {
-      const response = await api.post('/transactions/import', data);
+      await api.post('/transactions/import', data);
       history.push('/');
     } catch (err) {
       console.log(err.response.error);
